@@ -1,1 +1,51 @@
 /*-------------- Header -----------------*/
+.header-top{
+	background: #f1f9fd;
+	padding: 10px 0;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__slogan{
+		@include font(normal, normal, 13px, 1.2, #7eb6d2);
+	}
+}
+
+.header-mid{
+	padding: 20px 0;
+	border-bottom: 1px solid #d5e8f1;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo{
+		width: 156px;
+	}
+
+	&__address,
+	&__contact{
+		@include font(normal, normal, 12px, 1.25, #407a92);
+	}
+
+	&__mail{font-size: 13px;}
+
+	&__phone,
+	&__phone a{
+		@include font(normal, 600, 18px, 1.25, #407a92);
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__phone a:hover{color: $color-orange;}
+}
+
+.header-bottom{
+	padding: 18px 0;
+	border-bottom: 1px solid #d5e8f1;
+}

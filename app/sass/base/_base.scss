@@ -26,6 +26,10 @@ a:focus{
 	text-decoration: none;
 }
 
+.link-green{
+	color: #2cb97f;
+}
+
 p{
 	@include font(normal, normal, 16px, 1.4, $color-blue);
 	margin-bottom: 10px;
@@ -94,6 +98,7 @@ input[type="submit"].btn{
 	cursor: pointer;
 	text-decoration: none;
 	min-width: 100px;
+	white-space: nowrap;
 	transition: all 0.3s ease 0s;
 }
 
