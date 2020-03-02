@@ -1,0 +1,33 @@
+/*-------------- footer-menu -----------------*/
+.footer-menu{
+	page-break-inside:avoid;
+	break-inside:avoid-column;
+	margin-bottom: 37px;
+
+	&__head{
+		@include font(normal, 500, 16px, 1.2, #d0eefa);
+		margin-bottom: 15px;
+	}
+
+	&__list,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		page-break-inside:avoid;
+		break-inside:avoid-column;
+	}
+
+	&__item,
+	&__item a{
+		@include font(normal, normal, 14px, 1.2, #3588bf);
+	}
+
+	&__item a:hover{
+		text-decoration: none;
+	}
+
+	&__item:not(:last-child){
+		margin-bottom: 11px;
+	}
+}

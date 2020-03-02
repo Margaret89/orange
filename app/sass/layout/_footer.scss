@@ -1,1 +1,101 @@
 /*-------------- Footer -----------------*/
+.footer{
+	background: #0a3857;
+	color: #bbdbf0;
+}
+
+.footer-top{
+	padding: 23px 0 18px;
+	border-bottom: 1px solid #7dc1df;
+
+	.main-menu{
+		&__item,
+		&__item a{
+			font-size: 16px;
+			color: #bbdbf0;
+			text-decoration: none;
+			transition: all 0.3s ease 0s;
+		}
+
+		&__item a:hover{color: $color-orange;}
+	}
+}
+
+.footer-mid{
+	padding: 34px 0 45px;
+
+	&__menu{
+		column-count: 3;
+		column-gap: 20px;
+	}
+
+	&__info{
+		text-align: right;
+	}
+
+	&__address,
+	&__contact{
+		@include font(normal, normal, 14px, 1.5, #e5f6fd);
+	}
+
+	&__contact{margin-top: 19px;}
+
+	&__mail,
+	&__mail a{
+		color: #fff;
+	}
+
+	&__phone,
+	&__phone a{
+		@include font(normal, 600, 18px, 1.25, #d9eef7);
+		text-decoration: none;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__phone{margin-bottom: 14px;}
+
+	&__phone a:hover{color: $color-orange;}
+
+	.social{
+		justify-content: flex-end;
+		margin-top: 20px;
+	}
+}
+
+.footer-pay{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-top: 25px;
+
+	&__item{
+		text-decoration: none;
+		opacity: 0.5;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__item:not(:last-child){margin-right: 2px;}
+	&__item:hover{opacity: 1;}
+}
+
+.footer-bottom{
+	padding: 17px 0;
+	background: #043f61;
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__copyright{
+		@include font(normal, normal, 12px, 1.2, #95cce3);
+		letter-spacing: 0.5px;
+	}
+
+	&__polit,
+	&__polit a{
+		@include font(normal, normal, 12px, 1.2, #5887a2);
+		letter-spacing: 0.25px;
+	}
+}

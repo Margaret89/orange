@@ -1,0 +1,54 @@
+/*-------------- social -----------------*/
+.social{
+	display: flex;
+	align-items: center;
+
+	&__item{
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__item:not(:last-child){margin-right: 15px;}
+
+	&__item_vk{background: #4a76a8;}
+	&__item_fb{background: #4267b2;}
+	&__item_in{background: linear-gradient(45deg, rgba(187,75,191,1) 0%, rgba(194,118,18,1) 100%);}
+
+	&__item::after{
+		content: '';
+		display: inline-block;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+	}
+
+	&__item_vk::after{
+		width: 15px;
+		height: 8px;
+		background-position: -5px -5px;
+	}
+
+	&__item_fb::after{
+		width: 8px;
+		height: 13px;
+		background-position: -5px -20px;
+	}
+
+	&__item_in::after{
+		width: 12px;
+		height: 12px;
+		background-position: -5px -40px;
+	}
+
+	&__item_vk:hover{background: #406690;}
+	&__item_fb:hover{background: #355491;}
+	&__item_in:hover{background: linear-gradient(45deg, rgba(160,63,163,1) 0%, rgba(161,99,18,1) 100%);}
+}
