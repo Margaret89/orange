@@ -1,0 +1,57 @@
+/*-------------- type-visa -----------------*/
+.type-visa-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 10px 0 0 10px;
+}
+
+.type-visa{
+	margin-bottom: 46px;
+
+	&__head{
+		@include font(normal, 500, 21px, 1.4, $color-dark-blue);
+		margin-bottom: 18px;
+	}
+
+	&:nth-child(odd){
+		width: 240px;
+	}
+
+	&:nth-child(even){
+		width: calc(100% - 270px);
+	}
+}
+
+.type-visa-link{
+	width: calc(100% - 270px);
+	margin-top: 45px;
+
+	&__item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__item:not(:last-child){margin-bottom: 7px;}
+
+	&__icon{
+		width: 15px;
+		margin-right: 10px;
+	}
+
+	&__text{
+		max-width: calc(100% - 25px);
+		@include font(normal, normal, 15px, 1.2, $color-blue);
+	}
+}
+
+.type-visa-btn{
+	display: flex;
+	padding: 0 3px;
+	margin-top: 6px;
+
+	.btn_green{
+		width: 235px;
+		margin-right: 34px;
+	}
+}

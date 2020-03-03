@@ -1,0 +1,28 @@
+/*-------------- design-block -----------------*/
+.design-block{
+	background: url(#{$path-img}/bg-design-block.jpg) no-repeat top center;
+	padding: 117px 0 125px;
+	text-align: center;
+	@include font(normal, normal, 16px, 1.5, #7297a4);
+
+	h1,
+	.h1{
+		margin-bottom: 48px;
+	}
+
+	&__text{
+		@include font(normal, normal, 16px, 1.5, #7297a4);
+	}
+
+	&__btn{
+		margin-top: 40px;
+	}
+
+	&__sep{
+		margin: 10px 0;
+	}
+
+	&__link{
+		font-size: 15px;
+	}
+}

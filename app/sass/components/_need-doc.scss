@@ -1,0 +1,49 @@
+/*-------------- need-doc -----------------*/
+.need-doc{
+	margin-top: 133px;
+
+	h1,
+	.h1{
+		margin-bottom: 80px;
+	}
+
+	&__content{
+		margin-left: -30px;
+	}
+
+	&__btn{
+		margin-top: 30px;
+		padding-left: 15px;
+	}
+}
+
+.need-doc-list{
+	&__item{
+		padding-left: 18px;
+		position: relative;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: $color-green;
+		position: absolute;
+		top: 8px;
+		left: 0;
+	}
+
+	&__item:not(:last-child){margin-bottom: 31px;}
+
+	&__title{
+		@include font(normal, 500, 19px, 1.2, #343435);
+		margin-bottom: 12px;
+	}
+
+	&__text{
+		@include font(normal, normal, 15px, 1.45, #516c76);
+		letter-spacing: -0.15px;
+	}
+}

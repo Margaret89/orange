@@ -1,0 +1,52 @@
+/*-------------- card-list -----------------*/
+.card-list{
+	padding: 57px 0 34px;
+	background: linear-gradient(45deg, rgba(220,142,7,1) 0%, rgba(234,165,44,1) 100%);
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: calc(100% - 30px);
+		background: #fff;
+		border-radius: 3px;
+		padding: 34px;
+		box-shadow: 0px 18px 19px 0px rgba(69, 46, 5, 0.16);
+		text-decoration: none;
+		margin-bottom: 30px;
+		position: relative;
+		top: 0;
+		transition: all 0.3s ease 0s;
+	}
+
+	&__tag{
+		display: inline-block;
+		padding: 5px 10px 3px;
+		background: $color-orange;
+		@include font(normal, bold, 13px, 1.2, #fff);
+		border-radius: 3px;
+		margin-bottom: 10px;
+	}
+
+	&__name{
+		@include font(normal, 500, 22px, 1.2, #23576d);
+		margin-bottom: 10px;
+	}
+
+	&__price{
+		@include font(normal, 500, 18px, 1.2, #2797c5);
+	}
+
+	&__content{
+		margin-bottom: 25px;
+	}
+
+	&__item:hover .btn_border.btn_green{
+		background: #0eb570;
+		border-color: #0eb570;
+		color: #fff;
+		box-shadow: 0px 14px 16px 0px rgba(53, 179, 92, 0.27);
+	}
+
+	&__item:hover{top: 5px;}
+}

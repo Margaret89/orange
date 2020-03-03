@@ -1,0 +1,178 @@
+/*-------------- steps -----------------*/
+@keyframes circle-one{
+	0% { opacity: 0; }
+	11% { opacity: 0.2; }
+	100% { opacity: 0.2; }
+}
+
+@keyframes inner-circle-one{
+	0% { opacity: 0; }
+	11% { opacity: 0; }
+	22% { opacity: 0.5; }
+	100% { opacity: 0.5; }
+}
+
+@keyframes out-circle-one{
+	0% { opacity: 0; }
+	22% { opacity: 0; }
+	33% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+@keyframes arrow-one{
+	0% { opacity: 0; }
+	30% { opacity: 0; }
+	33% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+@keyframes circle-two{
+	0% { opacity: 0; }
+	33% { opacity: 0; }
+	44% { opacity: 0.2; }
+	100% { opacity: 0.2; }
+}
+
+
+@keyframes inner-circle-two{
+	0% { opacity: 0; }
+	44% { opacity: 0; }
+	55% { opacity: 0.5; }
+	100% { opacity: 0.5; }
+}
+
+@keyframes out-circle-two{
+	0% { opacity: 0; }
+	55% { opacity: 0; }
+	66% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+@keyframes arrow-two{
+	0% { opacity: 0; }
+	63% { opacity: 0; }
+	66% { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+@keyframes circle-three{
+	0% { opacity: 0; }
+	66% { opacity: 0; }
+	77% { opacity: 0.2; }
+	100% { opacity: 0.2; }
+}
+
+@keyframes inner-circle-three{
+	0% { opacity: 0; }
+	77% { opacity: 0; }
+	88% { opacity: 0.5; }
+	100% { opacity: 0.5; }
+}
+
+@keyframes out-circle-three{
+	0% { opacity: 0; }
+	88% { opacity: 0; }
+	99% { opacity: 0.25; }
+	100% { opacity: 0.25; }
+}
+
+.steps-wrap{
+	padding: 35px 0;
+}
+
+.steps{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -15px;
+
+	&__item{
+		max-width: calc(33.33% - 30px);
+		text-align: center;
+		margin: 0 15px 30px;
+		position: relative;
+	}
+
+	&__icon{
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		background: linear-gradient(45deg, rgba(220,142,7,1) 0%, rgba(234,165,44,1) 100%);
+		position: relative;
+		margin: 30px 30px 47px;
+	}
+
+	&__circle::before,
+	&__circle::after{
+		content: '';
+	}
+
+	&__circle,
+	&__circle::before,
+	&__circle::after{
+		display: inline-block;
+		border: 1px solid #39a6de;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		opacity: 0;
+	}
+
+	&__circle{width: 150px; height: 150px;}
+	&__circle::before{width: 190px; height: 190px;}
+	&__circle::after{width: 226px; height: 226px;}
+
+	&__item:not(:last-child)::after{
+		content: '';
+		display: inline-block;
+		width: 44px;
+		height: 14px;
+		background: url(#{$path-img}/arrow.png) no-repeat center;
+		opacity: 0;
+		position: absolute;
+		top: 83px;
+		right: -68px;
+	}
+
+	&__head{
+		@include font(normal, 500, 19px, 1.2, #23576d);
+		margin-bottom: 17px;
+	}
+
+	&__text{
+		width: 310px;
+		max-width: 100%;
+		margin: 0 auto;
+		@include font(normal, normal, 15px, 1.3, #7297a4);
+	}
+
+	&.animate &__item_one &__circle{animation: circle-one 4s ease 0.5s infinite;}
+	&.animate &__item_one &__circle::before{animation: inner-circle-one 4s ease 0.5s infinite;}
+	&.animate &__item_one &__circle::after{animation: out-circle-one 4s ease 0.5s infinite;}
+	&.animate &__item_two &__circle{animation: circle-two 4s ease 0.5s infinite;}
+	&.animate &__item_two &__circle::before{animation: inner-circle-two 4s ease 0.5s infinite;}
+	&.animate &__item_two &__circle::after{animation: out-circle-two 4s ease 0.5s infinite;}
+	&.animate &__item_three &__circle{animation: circle-three 4s ease 0.5s infinite;}
+	&.animate &__item_three &__circle::before{animation: inner-circle-three 4s ease 0.5s infinite;}
+	&.animate &__item_three &__circle::after{animation: out-circle-three 4s ease 0.5s infinite;}
+
+
+	&.animate &__item_one::after{animation: arrow-one 4s ease 0.5s infinite;}
+	&.animate &__item_two::after{animation: arrow-two 4s ease 0.5s infinite;}
+
+
+
+
+	// &.animate &__item_one &__circle::before,
+	// &.animate &__item_one &__circle::after,
+	// &.animate &__item_two &__circle::before,
+	// &.animate &__item_two &__circle::after,
+	// &.animate &__item_three &__circle::before,
+	// &.animate &__item_three &__circle::after{
+	// 	animation-fill-mode: forwards
+	// }
+}

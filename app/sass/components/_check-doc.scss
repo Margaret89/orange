@@ -1,0 +1,33 @@
+/*-------------- check-doc -----------------*/
+.check-doc{
+	background: linear-gradient(45deg, rgba(220,142,7,1) 0%, rgba(234,165,44,1) 100%);
+	color: #fff;
+	margin-top: 90px;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-height: 402px;
+		padding: 30px 0;
+	}
+
+	&__title{
+		@include font(normal, bold, 30px, 1.2, #fff);
+		margin-bottom: 7px;
+	}
+
+	&__text{
+		@include font(normal, normal, 19px, 1.2, #fff);
+	}
+
+	.btn{
+		margin-top: 33px;
+	}
+
+	&__img{
+		position: absolute;
+		@include top-center;
+		right: 0;
+	}
+}
