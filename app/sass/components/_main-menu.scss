@@ -16,9 +16,11 @@
 	&__item,
 	&__item a{
 		@include font(normal, 500, 17px, 1.2, #1b93d1);
+		transition: all 0.2s ease;
 	}
 
 	&__item a:hover{
+		color: $color-orange;
 		text-decoration: none;
 	}
 

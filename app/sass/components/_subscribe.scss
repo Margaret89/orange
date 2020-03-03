@@ -26,6 +26,18 @@
 		@include font(normal, 600, 16px, 1.4, #fff);
 		margin-right: 30px;
 	}
+
+	.form-subscribe::before{
+		content: '';
+		display: inline-block;
+		width: 77px;
+		height: 103px;
+		background: url(#{$path-img}/bg-mail.png) no-repeat center;
+		margin-right: 15px;
+		position: absolute;
+		right: 100%;
+		@include top-center;
+	}
 }
 
 .form-subscribe{

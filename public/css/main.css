@@ -355,7 +355,6 @@ input[type="submit"].btn_blue:hover {
 /*-------------- Header -----------------*/
 .header-top {
   background: #f1f9fd;
-  padding: 10px 0;
 }
 
 .header-top__content {
@@ -452,10 +451,6 @@ input[type="submit"].btn_blue:hover {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.footer-top .main-menu__item a:hover {
-  color: #eaa52c;
 }
 
 .footer-mid {
@@ -601,16 +596,28 @@ input[type="submit"].btn_blue:hover {
           align-items: center;
 }
 
-.top-menu__item,
-.top-menu__item a {
+.top-menu__item {
+  position: relative;
+}
+
+.top-menu__item, .top-menu__link {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 1.2;
   color: #3d86ab;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.top-menu__item a:hover {
+.top-menu__link {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.top-menu__item:hover .top-menu__link {
+  color: #0e5375;
   text-decoration: none;
 }
 
@@ -644,8 +651,48 @@ input[type="submit"].btn_blue:hover {
   margin: 0 auto;
 }
 
+.top-menu__sub, .top-menu__sub-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .top-menu__sub {
   display: none;
+  width: 242px;
+  padding: 10px 15px 17px;
+  background: #fff;
+  -webkit-box-shadow: 0px 7px 25px 0px rgba(95, 95, 95, 0.27);
+          box-shadow: 0px 7px 25px 0px rgba(95, 95, 95, 0.27);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+.top-menu__sub-item,
+.top-menu__sub-item a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #3d86ab;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.top-menu__sub-item a:hover {
+  color: #eaa52c;
+  text-decoration: none;
+}
+
+.top-menu__sub-item:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.top-menu__item:hover .top-menu__sub {
+  display: inline-block;
 }
 
 /*-------------- main-menu -----------------*/
@@ -674,9 +721,13 @@ input[type="submit"].btn_blue:hover {
   font-size: 17px;
   line-height: 1.2;
   color: #1b93d1;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .main-menu__item a:hover {
+  color: #eaa52c;
   text-decoration: none;
 }
 
@@ -724,6 +775,21 @@ input[type="submit"].btn_blue:hover {
   line-height: 1.4;
   color: #fff;
   margin-right: 30px;
+}
+
+.subscribe .form-subscribe::before {
+  content: '';
+  display: inline-block;
+  width: 77px;
+  height: 103px;
+  background: url(../img/bg-mail.png) no-repeat center;
+  margin-right: 15px;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .form-subscribe {
