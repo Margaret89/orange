@@ -144,3 +144,58 @@
 		</div>
 	</div>
 </footer>
+
+<!-- Форма обратной связи -->
+<div style="display: none;" id="feedback-form" class="popup-site">
+	<div class="popup-site__content">
+		<form method="get" class="form-site form-site_vert js-valid-form">
+			<div class="form-site__head">Перезвоним в течение 10 минут</div>
+
+			<div class="form-site__content">
+				<input type="text" placeholder="Номер телефона" class="js-phone" required="required">
+			</div>
+
+			<div class="form-site__btn">
+				<input type="submit" value="Заказать звонок" class="btn">
+			</div>
+
+			<div class="form-site__polit">
+				<div class="input-check">
+					<input type="checkbox" id="check-polit" checked="checked">
+					<label for="check-polit" class="input-check__label"><span class="input-check__mark"></span><span class="input-check__text">Даю согласие на обработку<br><a href="#">персональных данных</a></span></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- Форма Задать вопрос -->
+<div style="display: none;" id="ask-question" class="popup-site">
+	<div class="popup-site__content">
+		<form method="get" class="form-site js-valid-form">
+			<div class="form-site__head">Заполните форму</div>
+
+			<div class="form-site__content">
+				<input type="text" placeholder="Имя" required="required">
+				<input type="email" placeholder="E-mail" required="required">
+				<textarea placeholder="Текст вопроса"></textarea>
+			</div>
+
+			<div class="form-site__btn">
+				<input type="submit" value="Отправить" class="btn">
+			</div>
+
+			<div class="form-site__polit">
+				<div class="input-check">
+					<input type="checkbox" id="check-polit2" checked="checked">
+					<label for="check-polit2" class="input-check__label"><span class="input-check__mark"></span><span class="input-check__text">Даю согласие на обработку<br><a href="#">персональных данных</a></span></label>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- Попап об успешной отправки письма -->
+<div style="display: none;" id="msg-success" class="success-alert">
+	<div class="success-alert__text">Ваше сообщение успешно отправлено!</div>
+</div>

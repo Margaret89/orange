@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="js/vendor/slick/slick.css">
+		<link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -71,7 +72,7 @@
 										<a href="tel:+78129971870">+7 812 997 18 70</a>
 									</div>
 			
-									<a href="#" class="btn btn_border">Заказать звонок</a>
+									<a data-fancybox="" data-src="#feedback-form" href="javascript:;" class="btn btn_border">Заказать звонок</a>
 								</div>
 							</div>
 						</div>
@@ -84,10 +85,10 @@
 							<div class="col-12">
 								<nav class="main-menu">
 									<ul class="main-menu__list">
-										<li class="main-menu__item"><a href="#">Заказать визу онлайн</a></li>
-										<li class="main-menu__item"><a href="#">Оставить заявку на оформление</a></li>
-										<li class="main-menu__item"><a href="#">Проверить документы</a></li>
-										<li class="main-menu__item"><a href="#">Вызвать визового специалиста</a></li>
+										<li class="main-menu__item"><a href="#order-online" class="js-link-move">Заказать визу онлайн</a></li>
+										<li class="main-menu__item"><a href="#leave-request" class="js-link-move">Оставить заявку на оформление</a></li>
+										<li class="main-menu__item"><a href="#check-doc" class="js-link-move">Проверить документы</a></li>
+										<li class="main-menu__item"><a href="#call-specialist" class="js-link-move">Вызвать визового специалиста</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -255,10 +256,67 @@
 					</div>
 				</div>
 			</footer>
+			
+			<!-- Форма обратной связи -->
+			<div style="display: none;" id="feedback-form" class="popup-site">
+				<div class="popup-site__content">
+					<form method="get" class="form-site form-site_vert js-valid-form">
+						<div class="form-site__head">Перезвоним в течение 10 минут</div>
+			
+						<div class="form-site__content">
+							<input type="text" placeholder="Номер телефона" class="js-phone" required="required">
+						</div>
+			
+						<div class="form-site__btn">
+							<input type="submit" value="Заказать звонок" class="btn">
+						</div>
+			
+						<div class="form-site__polit">
+							<div class="input-check">
+								<input type="checkbox" id="check-polit" checked="checked">
+								<label for="check-polit" class="input-check__label"><span class="input-check__mark"></span><span class="input-check__text">Даю согласие на обработку<br><a href="#">персональных данных</a></span></label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<!-- Форма Задать вопрос -->
+			<div style="display: none;" id="ask-question" class="popup-site">
+				<div class="popup-site__content">
+					<form method="get" class="form-site js-valid-form">
+						<div class="form-site__head">Заполните форму</div>
+			
+						<div class="form-site__content">
+							<input type="text" placeholder="Имя" required="required">
+							<input type="email" placeholder="E-mail" required="required">
+							<textarea placeholder="Текст вопроса"></textarea>
+						</div>
+			
+						<div class="form-site__btn">
+							<input type="submit" value="Отправить" class="btn">
+						</div>
+			
+						<div class="form-site__polit">
+							<div class="input-check">
+								<input type="checkbox" id="check-polit2" checked="checked">
+								<label for="check-polit2" class="input-check__label"><span class="input-check__mark"></span><span class="input-check__text">Даю согласие на обработку<br><a href="#">персональных данных</a></span></label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<!-- Попап об успешной отправки письма -->
+			<div style="display: none;" id="msg-success" class="success-alert">
+				<div class="success-alert__text">Ваше сообщение успешно отправлено!</div>
+			</div>
 		</div>
 
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/vendor/slick/slick.min.js"></script>
+		<script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+		<script src="js/vendor/inputmask/jquery.maskedinput.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

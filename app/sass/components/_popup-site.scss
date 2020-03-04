@@ -1,0 +1,80 @@
+/*-------------- popup-site -----------------*/
+.popup-site{
+	&__content{
+		display: inline-block;
+		width: 440px;
+		background: #fff;
+		border-radius: 10px;
+		padding: 30px 37px;
+		margin-right: 50px;
+	}
+
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			width: calc(50% - 10px);
+			margin: 0 5px 10px;
+		}
+
+		textarea{
+			width: calc(100% - 10px);
+		}
+
+		&__content{
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+
+		&_vert input[type="text"],
+		&_vert input[type="email"],
+		&_vert textarea{
+			width: calc(100% - 10px);
+		}
+	}
+
+	.input-check{
+		margin-top: 21px;
+
+		&__label{
+			width: 100%;
+		}
+
+		&__text,
+		&__text a{
+			font-size: 12px;
+			color: #797979;
+		}
+	}
+}
+
+.fancybox-content{
+	padding: 0;
+	background: transparent;
+
+}
+
+.fancybox-button{
+	width: 28px;
+	height: 28px;
+	background: url(#{$path-img}/sprite.png) no-repeat -30px -120px;
+	opacity: 0.5;
+	transition: all 0.3s ease;
+
+	svg{display: none;}
+
+	&:hover{opacity: 1;}
+}
+
+.success-alert{
+	&__text{
+		display: inline-block;
+		width: 360px;
+		background: #fff;
+		border-radius: 10px;
+		padding: 30px 37px;
+		margin-right: 50px;
+		@include font(normal, normal, 15px, 1.45, $color-blue);
+		text-align: center;
+	}
+}
