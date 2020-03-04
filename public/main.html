@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="js/vendor/slick/slick.css">
 		<link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="js/vendor/select2/select2.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -163,11 +164,121 @@
 									</div>
 
 									<div class="type-visa-btn">
-										<a href="#" class="btn btn_green">Заказать визу онлайн</a>
+										<a data-fancybox="" data-src="#visa-online" href="javascript:;" class="btn btn_green">Заказать визу онлайн</a>
 										<a data-fancybox="" data-src="#ask-question" href="javascript:;" class="btn btn_border">Задать вопрос</a>
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+
+					<!-- Форма виза онлайн -->
+					<div style="display: none;" id="visa-online" class="popup-step">
+						<div class="popup-step__content">
+							<div class="tabs-step js-tabs-step">
+								<ul class="tabs-step__list js-tabs-step-list">
+									<li class="tabs-step__item js-tabs-step-item" data-item="tab-step1">
+										<div class="tabs-step__num">1</div>
+										<div class="tabs-step__title">Заполните общие данные</div>
+									</li>
+									<li class="tabs-step__item js-tabs-step-item" data-item="tab-step2">
+										<div class="tabs-step__num">2</div>
+										<div class="tabs-step__title">Паспортные данные</div>
+									</li>
+									<li class="tabs-step__item js-tabs-step-item" data-item="tab-step3">
+										<div class="tabs-step__num">3</div>
+										<div class="tabs-step__title">Название третьего шага</div>
+									</li>
+								</ul>
+
+								<div class="tabs-step__content js-tabs-step-content">
+									<div id="tab-step1" class="tabs-step__content-item js-tabs-step-content-item">
+										 <form method="get" class="form-step">
+											<div class="form-step__content">
+												<div class="form-step__item">
+													<div class="form-step__label">Выберите страну</div>
+													<select id="contry" class="select-site js-select" data-placeholder="Выберите из списка">
+														<option></option>
+														<option value="Amtel">Вариант 1</option>
+														<option value="Barum">Вариант 2</option>
+													</select>
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Уточните количество виз</div>
+													<select id="count" class="select-site js-select" data-placeholder="Взрослые 1, без детей">
+														<option></option>
+														<option value="Amtel">Взрослые 2</option>
+														<option value="Barum">Взрослые 3</option>
+													</select>
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Выберите тип страховки</div>
+													<select id="type-visa" class="select-site js-select" data-placeholder="Выберите страховую компанию">
+														<option></option>
+														<option value="Amtel">Вариант 1</option>
+														<option value="Barum">Вариант 2</option>
+													</select>
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Количество дней</div>
+													<select id="days" class="select-site js-select" data-placeholder="30 дней">
+														<option></option>
+														<option value="Amtel">14 дней</option>
+														<option value="Barum">7 дней</option>
+													</select>
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Когда бы вы хотели посетить консультсво (ВЦ)?</div>
+													<select id="visa-center" class="select-site js-select" data-placeholder="Выберите дату посещения ВЦ">
+														<option></option>
+														<option value="Amtel">Вариант 1</option>
+														<option value="Barum">Вариант 2</option>
+													</select>
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Время</div>
+													<input type="text" placeholder="с 8 до 16:00">
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Контактный E-mail:</div>
+													<input type="email" placeholder="Напишите электронную почту">
+												</div>
+
+												<div class="form-step__item">
+													<div class="form-step__label">Телефон</div>
+													<input type="text" placeholder="Напишите свой телефон" class="js-phone">
+												</div>
+											</div>
+
+											<div class="form-step__btn">
+												<input type="submit" value="Далее" class="btn btn_border btn_white">
+
+												<div class="form-step__polit">
+													<div class="input-check">
+														<input type="checkbox" id="polit3" checked="checked">
+														<label for="polit3" class="input-check__label"><span class="input-check__mark"></span><span class="input-check__text">Даю согласие на обработку <a href="#">персональных данных</a></span></label>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+
+									<div id="tab-step2" class="tabs-step__content-item js-tabs-step-content-item">
+										 Паспортные данные
+									</div>
+
+									<div id="tab-step3" class="tabs-step__content-item js-tabs-step-content-item">
+										Третий шаг
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</section><!-- end visa-process -->
@@ -1081,6 +1192,7 @@
 		<script src="js/vendor/slick/slick.min.js"></script>
 		<script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
 		<script src="js/vendor/inputmask/jquery.maskedinput.min.js"></script>
+		<script src="js/vendor/select2/select2.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -51,4 +51,36 @@ $(document).ready(function () {
 			e.preventDefault();
 		});
 	});
+
+// Стилизация выпадающего списка
+	if ($('.js-select').length) {
+		$('.js-select').select2({
+			minimumResultsForSearch: Infinity,
+			 placeholder: function(){
+				$(this).attr('data-placeholder');
+			},
+		});
+	}
+
+// Табуляция
+	if ($('.js-tabs-step').length) {
+		$('.js-tabs-step-list').each(function(){
+			$(this).find('.js-tabs-step-item:first').addClass("active");
+		});
+
+		$('.js-tabs-step-content').each(function(){
+			$(this).find('.js-tabs-step-content-item:first').fadeIn();
+		});
+
+		$('.js-tabs-step-item').click(function(e) {
+			e.preventDefault();
+			var $parent = $(this).parents('.js-tabs-step');
+
+			$parent.find('.js-tabs-step-content-item').hide();
+			$parent.find('.js-tabs-step-item').removeClass('active');
+
+			$(this).addClass("active");
+			$parent.find('#' + $(this).attr('data-item')).fadeIn();
+		});
+	}
 });
