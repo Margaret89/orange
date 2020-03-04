@@ -1,0 +1,51 @@
+/*-------------- unwrap-block -----------------*/
+.unwrap-block{
+	background: #fff;
+	box-shadow: 0px 13px 19px 0px rgba(6, 52, 71, 0.07);
+	margin-bottom: 30px;
+
+	&__head{
+		@include font(normal, 500, 18px, 1.2, $color-orange);
+		padding: 28px 60px 28px 40px;
+		position:relative;
+		cursor:pointer;
+		transition: all 0.3s ease;
+	}
+
+	&__head:hover{
+		color: #23576d;
+	}
+
+	&__head::after{
+		content:'';
+		display:block;
+		width: 16px;
+		height: 9px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -105px;
+		position:absolute;
+		@include top-center;
+		right: 40px;
+		transition: transform 0.3s ease;
+	}
+
+	&__head:hover::after{background-position: -30px -105px;}
+	&.opened &__head::after{transform: rotate(180deg);}
+
+	&.opened &__head,
+	&.opened &__head:hover{
+		color: #23576d;
+	}
+
+	&.opened{box-shadow: 0px 1px 3px 0px rgba(6, 52, 71, 0.22);}
+
+	&__content{
+		display: none;
+		padding: 0 40px 35px;
+		margin-top: -15px;
+	}
+
+	&__content,
+	&__content p{
+		@include font(normal, normal, 15px, 1.5, $color-blue);
+	}
+}

@@ -31,14 +31,14 @@ a:focus{
 }
 
 p{
-	@include font(normal, normal, 16px, 1.4, $color-blue);
-	margin-bottom: 10px;
+	@include font(normal, normal, 16px, 1.45, $color-blue);
+	margin-bottom: 23px;
 }
 
 h1,
 .h1{
 	@include font(normal, 600, 33px, 1.2, $color-dark-blue);
-	margin-bottom: 40px;
+	margin-bottom: 54px;
 }
 
 h2,
@@ -82,7 +82,7 @@ h6,
 
 main{
 	flex: 1;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 
 .btn,

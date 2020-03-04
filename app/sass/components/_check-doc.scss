@@ -2,7 +2,6 @@
 .check-doc{
 	background: linear-gradient(45deg, rgba(220,142,7,1) 0%, rgba(234,165,44,1) 100%);
 	color: #fff;
-	margin-top: 90px;
 
 	&__content{
 		display: flex;
@@ -10,6 +9,11 @@
 		position: relative;
 		min-height: 402px;
 		padding: 30px 0;
+		z-index: 2;
+	}
+
+	&__info{
+		width: calc(100% - 300px);
 	}
 
 	&__title{
@@ -30,4 +34,23 @@
 		@include top-center;
 		right: 0;
 	}
+
+	&__phone{
+		display: inline-block;
+		vertical-align: middle;
+		@include font(normal, 500, 28px, 1, #fff);
+		text-decoration: none;
+		margin-left: 33px;
+		transition: all 0.3s ease;
+	}
+
+	&__phone:hover{color: $color-blue;}
+
+	&_right &__img{
+		right: auto;
+		left: 0;
+	}
+
+	&_right &__content{justify-content: flex-end;}
+	&_right &__info{width: calc(100% - 502px);}
 }

@@ -1,34 +1,26 @@
 $(document).ready(function () {
+// Слайдер отзывов
+	$('.js-review-slider').slick({
+		dots: true,
+		infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 1
+	});
 
+// Раскрывающийся блок
+	$(".js-unwrap-block").on('click','.js-unwrap-head',function(event){
+		event.preventDefault();
+		$(this).parent().toggleClass("opened");
+		if($(this).parent().hasClass("opened")){
+			$(this).parent().children(".js-unwrap-content").slideDown(400);
+		}
+		else{
+			$(this).parent().children(".js-unwrap-content").slideUp(400);
+		}
+	});
 	
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
 	// $("#phone").mask("(999) 999-9999");
 
-	// // Вызов функции подгрузки изображений
-	// loadBigImg();
-	// loadBigBacground();
-
-	// // Вызов функции прижатия футера к низу экрана
-	// footerBind('.js-main','.js-header,.js-footer');
-	// $(window).on('resize',function(){footerBind('.js-main','.js-header,.js-footer')});
 });
-
-// // Загрузка больших изображений
-// function loadBigImg() {
-// 	var $imgDefer = $('[data-src]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlImgBig = $(this).attr("data-src");
-// 		$(this).attr("src", urlImgBig);
-// 	});
-// }
-
-// function loadBigBacground() {
-// 	var $imgDefer = $('[data-background]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlBackgroundBig = $(this).attr("data-background");
-// 		$(this).css("background-image", "url("+ urlBackgroundBig +")");
-// 	});
-// }
