@@ -356,6 +356,11 @@ input[type="submit"].btn_blue:hover {
   background: #f9f9f9;
 }
 
+.head-page h1,
+.head-page .h1 {
+  margin-bottom: 28px;
+}
+
 /*-------------- Header -----------------*/
 .header-top {
   background: #f1f9fd;
@@ -1768,6 +1773,11 @@ input[type="submit"].btn_blue:hover {
   margin-bottom: 80px;
 }
 
+.need-doc h2,
+.need-doc .h2 {
+  margin-bottom: 55px;
+}
+
 .need-doc__content {
   margin-left: -30px;
 }
@@ -1775,6 +1785,10 @@ input[type="submit"].btn_blue:hover {
 .need-doc__btn {
   margin-top: 30px;
   padding-left: 15px;
+}
+
+.need-doc + .check-doc {
+  margin-top: 152px;
 }
 
 .need-doc-list__item {
@@ -1971,6 +1985,9 @@ input[type="submit"].btn_blue:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 420px;
   margin: 0 15px 50px;
 }
@@ -2010,6 +2027,33 @@ input[type="submit"].btn_blue:hover {
   font-size: 15px;
   line-height: 1.45;
   color: #516c76;
+}
+
+.problems__label {
+  max-width: 340px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.2;
+  color: #23576d;
+}
+
+.org-wrap {
+  margin-top: 20px;
+}
+
+.org-wrap h2,
+.org-wrap .h2 {
+  margin-bottom: 40px;
+}
+
+.org-wrap .problems__item {
+  width: calc(50% - 30px);
+  margin-bottom: 33px;
+}
+
+.org-wrap + .need-doc {
+  margin-top: 45px;
 }
 
 /*-------------- advant -----------------*/
@@ -2064,6 +2108,11 @@ input[type="submit"].btn_blue:hover {
 .advant-wrap h1,
 .advant-wrap .h1 {
   margin-bottom: 58px;
+}
+
+.advant-wrap_no-bg {
+  background: none;
+  padding: 12px 0 0;
 }
 
 .advant {
@@ -3111,4 +3160,44 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 
 .form-step .input-check__label {
   width: 100%;
+}
+
+/*-------------- breadcrumb -----------------*/
+.breadcrumb {
+  margin-top: 48px;
+  margin-bottom: 13px;
+}
+
+.breadcrumb__list, .breadcrumb__item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.breadcrumb__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #313140;
+  position: relative;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: '/';
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.breadcrumb__link {
+  color: #2cb97f;
 }

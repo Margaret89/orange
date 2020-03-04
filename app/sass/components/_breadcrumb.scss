@@ -1,0 +1,33 @@
+/*-------------- breadcrumb -----------------*/
+.breadcrumb{
+	margin-top: 48px;
+	margin-bottom: 13px;
+
+	&__list,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item{
+		@include font(normal, normal, 13px, 1.2, $color-dark-blue);
+		position: relative;
+	}
+
+	&__item:not(:last-child)::after{
+		content: '/';
+		display: inline-block;
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+
+	&__link{
+		color: #2cb97f;
+	}
+}
