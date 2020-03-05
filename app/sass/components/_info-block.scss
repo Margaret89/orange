@@ -2,3 +2,9 @@
 .info-block{
 	margin-top: 100px;
 }
+
+@media (max-width: 767px) {
+	.info-block{
+		margin-top: 45px;
+	}
+}

@@ -97,3 +97,21 @@
 	&.animate &__circle::before{animation: inner-circle-one 2s ease 0.5s infinite;}
 	&.animate &__circle::after{animation: out-circle-one 2s ease 0.5s infinite;}
 }
+
+@media (max-width: 767px) {
+	.advant-wrap{
+		margin-top: 0;
+		padding-bottom: 35px;
+
+		h1,
+		.h1{
+			margin-bottom: 30px;
+		}
+	}
+
+	.advant{
+		display: block;
+
+		&__item{max-width: calc(100% - 30px);}
+	}
+}

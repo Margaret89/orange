@@ -102,3 +102,17 @@
 		display: none;
 	}
 }
+
+@media (max-width: 767px) {
+	.tabs-step{
+		&__list{display: block;}
+		&__item{
+			width: calc(100% - 14px);
+			min-height: 0;
+			padding: 10px 15px;
+			margin-top: -2px;
+		}
+
+		&__content{padding: 20px 15px;}
+	}
+}

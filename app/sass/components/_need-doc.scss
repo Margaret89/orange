@@ -57,3 +57,13 @@
 		letter-spacing: -0.15px;
 	}
 }
+
+@media (max-width: 767px) {
+	.need-doc{
+		margin-top: 45px;
+		margin-bottom: 45px;
+
+		&__content{margin-left: 0;}
+		& + .check-doc{margin-top: 50px;}
+	}
+}

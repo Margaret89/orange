@@ -102,3 +102,11 @@
 // 		background-position: -40px -265px;
 // 	}
 // }
+
+@media (max-width: 767px) {
+	.select2-container .select2-selection--single,
+	.select2-container--default .select2-selection--single .select2-selection__rendered{
+		height: 49px;
+		line-height: 49px;
+	}
+}

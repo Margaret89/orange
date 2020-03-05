@@ -75,3 +75,52 @@
 		border-color:$color-orange;
 	}
 }
+
+@media (max-width: 1349px) {
+	.form-subscribe{
+		input[type="text"],
+		input[type="email"]{
+			width: 400px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.subscribe{
+		&__content{
+			flex-wrap: wrap;
+		}
+
+		&__text{
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
+		form{width: 100%;}
+	}
+
+	.form-subscribe{
+		input[type="text"],
+		input[type="email"]{
+			width: calc(100% - 200px);
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.form-subscribe{
+		display: block;
+
+		input[type="text"],
+		input[type="email"]{
+			width: 100%;
+			margin-right: 0;
+		}
+
+		input[type="submit"].btn{
+			width: 100%;
+			margin-top: 10px;
+		}
+	}
+}

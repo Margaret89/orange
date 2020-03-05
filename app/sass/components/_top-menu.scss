@@ -90,6 +90,10 @@
 	}
 
 	&__sub-item:not(:last-child){margin-bottom: 7px;}
+}
 
-	&__item:hover &__sub{display: inline-block;}
+@media (min-width: 992px) {
+	.top-menu{
+		&__item:hover &__sub{display: inline-block;}
+	}
 }

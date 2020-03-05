@@ -55,3 +55,53 @@
 		margin-right: 34px;
 	}
 }
+
+@media (max-width: 991px) {
+	.type-visa-wrap{
+		padding: 0;
+		margin: 50px 0 60px;
+	}
+
+	.type-visa{
+		&:nth-child(odd),
+		&:nth-child(even){
+			width: 50%;
+		}
+	}
+
+	.type-visa-link{width: 50%;}
+
+	.type-visa-btn{
+		width: 100%;
+
+		.btn_green{
+			width: calc(50% - 30px);
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.type-visa-wrap{margin-bottom: 35px;}
+
+	.type-visa{
+		margin-bottom: 25px;
+
+		&:nth-child(odd),
+		&:nth-child(even){
+			width: 100%;
+		}
+	}
+
+	.type-visa-link{
+		width: 100%;
+		margin-top: 0;
+	}
+
+	.type-visa-btn{
+		flex-wrap: wrap;
+		margin-top: 30px;
+
+		.btn{margin-bottom: 15px;}
+		.btn_green{width: auto;}
+	}
+}

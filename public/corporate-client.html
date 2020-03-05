@@ -10,10 +10,13 @@
 		<link rel="stylesheet" href="js/vendor/slick/slick.css">
 		<link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
 		<link rel="stylesheet" href="js/vendor/select2/select2.min.css">
+		<link rel="stylesheet" href="css/hamburger.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body>
+	<body class="js-body">
 		<div class="wrapper">
+			<div class="shadow-site d-lg-none js-shadow"></div>
+			
 			<header>
 				<div class="header-top">
 					<div class="container">
@@ -22,10 +25,10 @@
 								<div class="header-top__content">
 									<div class="header-top__slogan">Оформление шенгенских виз в Санкт-Петербурге или другой текст</div>
 			
-									<nav class="top-menu">
-										<ul class="top-menu__list">
-											<li class="top-menu__item">
-												<a href="#" class="top-menu__link">Услуги<span class="top-menu__arr"></span></a>
+									<nav class="top-menu js-add-mm" data-order="1">
+										<ul class="top-menu__list js-top-menu">
+											<li class="top-menu__item js-top-menu-item">
+												<a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">Услуги</span><span class="top-menu__arr js-top-menu-arr"></span></a>
 			
 												<ul class="top-menu__sub">
 													<li class="top-menu__sub-item"><a href="#">Название услуги может быть в две строки</a></li>
@@ -33,11 +36,11 @@
 													<li class="top-menu__sub-item"><a href="#">Название услуги</a></li>
 												</ul>
 											</li>
-											<li class="top-menu__item"><a href="#" class="top-menu__link">FAQ</a></li>
-											<li class="top-menu__item"><a href="#" class="top-menu__link">Отзывы</a></li>
-											<li class="top-menu__item"><a href="#" class="top-menu__link">Агентам</a></li>
-											<li class="top-menu__item"><a href="#" class="top-menu__link">О компании</a></li>
-											<li class="top-menu__item"><a href="#" class="top-menu__link">Контакты</a></li>
+											<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">FAQ</span></a></li>
+											<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">Отзывы</span></a></li>
+											<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">Агентам</span></a></li>
+											<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">О компании</span></a></li>
+											<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link"><span class="js-top-menu-text">Контакты</span></a></li>
 										</ul>
 									</nav>
 								</div>
@@ -55,9 +58,9 @@
 										<a href="/"><img src="img/logo.png" alt=""></a>
 									</div>
 			
-									<a href="#" class="btn btn_border">Проверить готовность визы</a>
+									<a href="#" class="btn btn_border d-none d-xl-inline-block">Проверить готовность визы</a>
 			
-									<div class="header-mid__contact">
+									<div class="header-mid__contact js-add-mm" data-order="2">
 										<div class="header-mid__address">
 											Бизнес центр «Сенатор»<br>
 											н-я, Черной Речки, дом 31, офис Б-117
@@ -68,12 +71,14 @@
 										</div>
 									</div>
 			
-									<div class="header-mid__phone">
+									<div class="header-mid__phone js-add-mm" data-order="3">
 										<a href="tel:+78005005555"><b>8 800 500 55 55</b></a><br>
 										<a href="tel:+78129971870">+7 812 997 18 70</a>
 									</div>
 			
-									<a data-fancybox="" data-src="#feedback-form" href="javascript:;" class="btn btn_border">Заказать звонок</a>
+									<a data-fancybox="" data-src="#feedback-form" href="javascript:;" class="btn btn_border js-add-mm" data-order="4">Заказать звонок</a>
+			
+									<span class="ic-hamburger js-open-menu d-inline-block d-lg-none"><span></span></span>
 								</div>
 							</div>
 						</div>
@@ -96,6 +101,15 @@
 						</div>
 					</div>
 				</div><!-- end header-bottom -->
+			
+				<div class="mobile-menu js-mobile-menu d-lg-none">
+					<div class="mobile-menu__head">
+						<div class="mobile-menu__title js-menu-back">Меню</div>
+						<span class="ic-hamburger active js-close-menu"><span></span></span>
+					</div>
+			
+					<div class="mobile-menu__content js-mobile-menu-content"></div>
+				</div>
 			</header>
 			<main>
 				<section class="breadcrumb">
@@ -200,13 +214,13 @@
 						</div>
 
 						<div class="row">
-							<div class="col-6">
+							<div class="col-md-6">
 								<div class="need-doc__img">
 									<img src="upload/girl.png" alt="" style="margin-top: -45px;">
 								</div>
 							</div>
 
-							<div class="col-5">
+							<div class="col-md-5">
 								<div class="need-doc__content">
 									<div class="need-doc-list">
 										<div class="need-doc-list__item">
@@ -335,7 +349,7 @@
 			</section><!-- end subscribe -->
 			
 			<footer class="footer">
-				<div class="footer-top">
+				<div class="footer-top d-none d-md-block">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
@@ -355,10 +369,10 @@
 				<div class="footer-mid">
 					<div class="container">
 						<div class="row">
-							<div class="col-8">
+							<div class="col-md-8">
 								<div class="footer-mid__menu">
 									<div class="footer-menu">
-										<div class="footer-menu__head">Офор��ление виз</div>
+										<div class="footer-menu__head">Оформление виз</div>
 			
 										<ul class="footer-menu__list">
 											<li class="footer-menu__item"><a href="#">Виза в Финляндию</a></li>
@@ -411,7 +425,7 @@
 								</div>
 							</div>
 			
-							<div class="col-4">
+							<div class="col-md-4">
 								<div class="footer-mid__info">
 									<div class="footer-mid__phone">
 										<a href="tel:+78005005555"><b>8 800 500 55 55</b></a><br>

@@ -66,3 +66,13 @@
 		width: calc(100% - 30px);
 	}
 }
+
+@media (max-width: 767px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			width: calc(100% - 30px);
+		}
+	}
+}

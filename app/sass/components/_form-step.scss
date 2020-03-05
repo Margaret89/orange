@@ -79,3 +79,25 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.form-step{
+		&__content{display: block;}
+		&__item{width: calc(100% - 30px);}
+
+		input[type="text"],
+		input[type="email"],
+		textarea{
+			height: 49px;
+			line-height: 49px;
+		}
+
+		textarea{height: 120px;}
+		&__btn{display: block;}
+		&__polit{
+			width: 100%;
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+}

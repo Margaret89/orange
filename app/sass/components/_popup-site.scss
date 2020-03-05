@@ -78,3 +78,23 @@
 		text-align: center;
 	}
 }
+
+@media (max-width: 767px) {
+	.popup-site{
+		&__content{
+			width: 100%;
+			max-width: 440px;
+			padding: 25px 20px;
+			margin-right: 0;
+			margin-top: 50px;
+		}
+
+		.form-site{
+			input[type="text"],
+			input[type="email"],
+			textarea{
+				width: calc(100% - 10px);
+			}
+		}
+	}
+}

@@ -48,3 +48,38 @@
 	padding: 18px 0;
 	border-bottom: 1px solid #d5e8f1;
 }
+
+@media (max-width: 991px) {
+	.header-top{
+		padding: 10px 0;
+
+		.top-menu{display: none;}
+	}
+
+	.header-mid{
+		& &__contact{display: none;}
+	}
+}
+
+@media (max-width: 767px) {
+	.header-top{
+		text-align: center;
+
+		&__content{display: block;}
+	}
+
+	.header-mid{
+		&__content{
+			justify-content: center;
+			position: relative;
+		}
+
+		& &__phone, & .btn{display: none;}
+
+		.ic-hamburger{
+			position: absolute;
+			@include top-center;
+			right: 15px;
+		}
+	}
+}

@@ -30,3 +30,12 @@
 
 	.list-blue li:not(:last-child){margin-bottom: 10px;}
 }
+
+@media (max-width: 767px) {
+	.offer{
+		padding-bottom: 0;
+		
+		&__content{padding: 25px;}
+		&__price{padding: 13px 25px;}
+	}
+}

@@ -97,3 +97,48 @@
 		letter-spacing: 0.25px;
 	}
 }
+
+@media (max-width: 1349px) {
+	.footer-top{
+		.main-menu{
+			&__item,
+			&__item a{
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-mid{
+		&__menu{
+			column-count: 2;
+		}
+
+		&__info{text-align: left;}
+		.social{justify-content: flex-start;}
+
+		&__menu{
+			margin-bottom: 35px;
+		}
+	}
+
+	.footer-pay{justify-content: flex-start;}
+
+	.footer-bottom{
+		&__content{
+			display: block;
+			text-align: center;
+		}
+
+		&__copyright{margin-bottom: 5px;}
+	}
+}
+
+@media (max-width: 375px) {
+	.footer-mid{
+		&__menu{
+			column-count: 1;
+		}
+	}
+}

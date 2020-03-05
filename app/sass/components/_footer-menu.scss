@@ -31,3 +31,14 @@
 		margin-bottom: 11px;
 	}
 }
+
+@media (max-width: 767px) {
+	.footer-menu{
+		page-break-inside: auto;
+		
+		&__list,
+		&__item{
+			page-break-inside: auto;
+		}
+	}
+}

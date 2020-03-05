@@ -1,6 +1,7 @@
 /*-------------- visa-process -----------------*/
 .visa-process{
 	margin-top: 70px;
+	overflow: hidden;
 
 	&__info{
 		height: 100%;
@@ -30,5 +31,15 @@
 
 	&__img{
 		margin-bottom: 83px;
+	}
+}
+
+@media (max-width: 767px) {
+	.visa-process{
+		margin-top: 35px;
+		
+		&__head{font-size: 26px;}
+		&__title{font-size: 32px;}
+		&__img{margin-bottom: 50px;}
 	}
 }
