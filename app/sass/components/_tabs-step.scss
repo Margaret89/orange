@@ -105,12 +105,17 @@
 
 @media (max-width: 767px) {
 	.tabs-step{
-		&__list{display: block;}
+		&__list{
+			display: block;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
 		&__item{
-			width: calc(100% - 14px);
+			width: 100%;
 			min-height: 0;
 			padding: 10px 15px;
-			margin-top: -2px;
+			margin: -2px 0 0;
 		}
 
 		&__content{padding: 20px 15px;}

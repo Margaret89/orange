@@ -3298,6 +3298,10 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   width: 100% !important;
 }
 
+.select2-container {
+  z-index: 99999;
+}
+
 .select2-container .select2-selection--single {
   display: block;
   width: 100%;
@@ -3566,12 +3570,14 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 @media (max-width: 767px) {
   .tabs-step__list {
     display: block;
+    margin-left: 0;
+    margin-right: 0;
   }
   .tabs-step__item {
-    width: calc(100% - 14px);
+    width: 100%;
     min-height: 0;
     padding: 10px 15px;
-    margin-top: -2px;
+    margin: -2px 0 0;
   }
   .tabs-step__content {
     padding: 20px 15px;
